@@ -1,5 +1,4 @@
-  #!/usr/bin/env python3
-#created by joey scarlett kq4cin
+#!/usr/bin/env python3
 
 import urllib.parse
 import urllib.request
@@ -29,6 +28,7 @@ def fetch_directions(url):
 
 def handle_client(conn):
     try:
+        conn.settimeout(40)  # Set a timeout for the connection
         while True:
             origin = get_address_input("Enter the origin address: ", conn)
             destination = get_address_input("Enter the destination address: ", conn)
@@ -39,9 +39,14 @@ def handle_client(conn):
             conn.sendall(directions.encode())
             conn.sendall("\nDo you want to fetch directions for another route? (yes/no): ".encode())
             response = conn.recv(1024).decode().strip().lower()
+            if not response:  # Handle client disconnection
+                print("Client disconnected")
+                break
             if response != 'yes':
                 conn.sendall("Goodbye!\n".encode())
                 break
+    except socket.timeout:
+        print("Connection timed out")
     except Exception as e:
         conn.sendall(f"An error occurred: {str(e)}\n".encode())
     finally:
