@@ -4,7 +4,7 @@ Here is an example of how your connect statement will look like
 ATTACH 2 
 c 10.169.87.83 9005 REALTELNET NOCALL K S,,0
 
-# Directions Fetcher Server
+# Directions directions.py
 
 This Python script sets up a simple server that fetches driving directions between two addresses using an online service. The server communicates with clients over a TCP connection, prompting them for origin and destination addresses, and then returns the driving directions.
 
