@@ -71,7 +71,8 @@ This Python script sets up a simple server that fetches driving directions betwe
 3. Run the Docker container:
 
     ```sh
-    docker run -p 9005:9005 directions.py
+   docker run -p 9005:9005 directions-app
+
     ```
 
     This command runs the Docker container and maps port 9005 on your host to port 9005 in the container.
@@ -86,9 +87,8 @@ docker build -t directions-app .
 
 
 # Step 3: Run the Docker container
-docker run -p 9005:9005 directions.py
+docker run -p 9005:9005 directions-app
 
-Sure, here is the updated `README.md` file without the Python script:
 
 ```markdown
 # Directions directions.py
@@ -145,10 +145,9 @@ Dockerfile
     EXPOSE 9005
 
     # Run the script
-    CMD ["sh", "-c", "while true; do python3 your_script.py; sleep 1; done"]
+    CMD ["sh", "-c", "while true; do python3 directions.py; sleep 1; done"]
     ```
 
-    Replace `your_script.py` with the actual name of your Python script file.
 
 2. Build the Docker image:
 
@@ -166,7 +165,8 @@ directions-app
 3. Run the Docker container:
 
     ```sh
-    docker run -p 9005:9005 directions.py
+  docker run -p 9005:9005 directions-app
+
     ```
 
     This command runs the Docker container and maps port 9005 on your host to port 9005 in the container.
@@ -181,7 +181,8 @@ docker build -t directions-app .
 
 
 # Step 3: Run the Docker container
-docker run -p 9005:9005 directions.py
+docker run -p 9005:9005 directions-app
+
 ```
 
 ## Usage
