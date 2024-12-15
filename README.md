@@ -84,12 +84,12 @@ This Python script sets up a simple server that fetches driving directions betwe
 docker build -t directions.py
 
 # Step 3: Run the Docker container
-docker run -p 9005:9005 directions-fetcher
+docker run -p 9005:9005 directions.py
 
 Sure, here is the updated `README.md` file without the Python script:
 
 ```markdown
-# Directions Fetcher Server
+# Directions directions.py
 
 This Python script sets up a simple server that fetches driving directions between two addresses using an online service. The server communicates with clients over a TCP connection, prompting them for origin and destination addresses, and then returns the driving directions.
 
@@ -114,7 +114,7 @@ This Python script sets up a simple server that fetches driving directions betwe
 3. Run the script:
 
     ```sh
-    python3 your_script.py
+    python3 directions.py
     ```
 
 ### Running the Script with Docker
@@ -163,7 +163,7 @@ directions-fetcher
 3. Run the Docker container:
 
     ```sh
-    docker run -p 9005:9005 directions-fetcher
+    docker run -p 9005:9005 directions.py
     ```
 
     This command runs the Docker container and maps port 9005 on your host to port 9005 in the container.
@@ -174,10 +174,10 @@ directions-fetcher
 # Step 1: Create Dockerfile (content provided above)
 
 # Step 2: Build the Docker image
-docker build -t directions-fetcher .
+docker build -t directions.py
 
 # Step 3: Run the Docker container
-docker run -p 9005:9005 directions-fetcher
+docker run -p 9005:9005 directions.py
 ```
 
 ## Usage
