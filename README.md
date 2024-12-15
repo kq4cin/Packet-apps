@@ -29,7 +29,7 @@ This Python script sets up a simple server that fetches driving directions betwe
 3. Run the script:
 
     ```sh
-    python3 your_script.py
+    python3 directions.py
     ```
 
 ### Running the Script with Docker
@@ -62,7 +62,8 @@ This Python script sets up a simple server that fetches driving directions betwe
 2. Build the Docker image:
 
     ```sh
-    docker build -t directions.py  
+    docker build -t directions-app .
+ 
     ```
 
     This command builds the Docker image and tags it as [directions-fetcher](http://_vscodecontentref_/1).
@@ -81,7 +82,8 @@ This Python script sets up a simple server that fetches driving directions betwe
 # Step 1: Create Dockerfile (content provided above)
 
 # Step 2: Build the Docker image
-docker build -t directions.py
+docker build -t directions-app .
+
 
 # Step 3: Run the Docker container
 docker run -p 9005:9005 directions.py
@@ -151,12 +153,13 @@ Dockerfile
 2. Build the Docker image:
 
     ```sh
-    docker build -t directions-fetcher .
+   docker build -t directions-app .
+
     ```
 
     This command builds the Docker image and tags it as 
 
-directions-fetcher
+directions-app
 
 .
 
@@ -174,7 +177,8 @@ directions-fetcher
 # Step 1: Create Dockerfile (content provided above)
 
 # Step 2: Build the Docker image
-docker build -t directions.py
+docker build -t directions-app .
+
 
 # Step 3: Run the Docker container
 docker run -p 9005:9005 directions.py
