@@ -60,15 +60,17 @@ This Python script sets up a simple server that fetches driving directions betwe
   
 
 2. Build the Docker image:
+   #Be sure your in the directory that contains both the docker file and the script
+   # cd into the the directory then issue the docker build command
 
     ```sh
     docker build -t directions-app .
  
     ```
 
-    This command builds the Docker image and tags it as [directions-fetcher](http://_vscodecontentref_/1).
+    This command builds the Docker image and tags it as directions.py
 
-3. Run the Docker container:
+4. Run the Docker container:
 
     ```sh
    docker run -p 9005:9005 directions-app
