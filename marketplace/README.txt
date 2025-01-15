@@ -35,7 +35,7 @@ To install and run the TCP server script, follow these steps:
 ## Usage
 
 1. **Start the Server**:
-    - Run the server script using the command mentioned above. The server will start listening on port 9016.
+    - Run the server script using the command mentioned above. The server will start listening on port 9004.
 
 2. **Connect to the Server**:
     - Use any TCP client to connect to the server. For example, you can use `telnet`:
