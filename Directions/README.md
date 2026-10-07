@@ -1,5 +1,7 @@
 # Packet-apps
-This script works with LINBPQ and fetches driving directions from https://gdir.telae.net/.
+> **Notice:** The directions service at https://gdir.telae.net/ is no longer working, so this directions app no longer functions.
+
+This script was built to work with LINBPQ and fetch driving directions from https://gdir.telae.net/.
 Here is an example of how your connect statement will look like 
 ATTACH 2 
 c 10.169.87.83 9005 REALTELNET NOCALL K S,,0
